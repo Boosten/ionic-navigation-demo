@@ -1,5 +1,7 @@
 {
   "name": "ionic-navigation-demo",
-  "integrations": {},
+  "integrations": {
+    "capacitor": {}
+  },
   "type": "angular"
 }
