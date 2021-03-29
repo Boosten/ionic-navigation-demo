@@ -6,11 +6,18 @@ const routes: Routes = [
   {
     path: '',
     component: Tab2Page,
-  }
+  },
+  {
+    path: 'chat-detail/:id',
+    loadChildren: () =>
+      import('./chat-detail/chat-detail.module').then(
+        (m) => m.ChatDetailPageModule
+      ),
+  },
 ];
 
 @NgModule({
   imports: [RouterModule.forChild(routes)],
-  exports: [RouterModule]
+  exports: [RouterModule],
 })
 export class Tab2PageRoutingModule {}
