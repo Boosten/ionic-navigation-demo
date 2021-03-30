@@ -18,6 +18,7 @@
   <ion-button color="medium" routerLink="/tabs/tab2"> Click me </ion-button>
   <ion-button color="light" routerLink="/tabs/tab2"> Click me </ion-button>
   <hr />
+
   <h2>alert</h2>
   <ion-button (click)="showAlert()" mode="ios"> Click me </ion-button>
   <ion-button (click)="showAlert()" color="secondary"> Click me </ion-button>
@@ -26,5 +27,12 @@
   <ion-button (click)="showAlert()" color="medium"> Click me </ion-button>
   <ion-button (click)="showAlert()" color="light"> Click me </ion-button>
   <hr />
-  <ion-button mode="md" (click)="presentModal()"> Click me </ion-button>
+  <ion-button mode="md" (click)="presentModal()"> modalctrl </ion-button>
+  <ion-button mode="md" (click)="presentNativeModal()">
+    native modal
+  </ion-button>
+
+  <ion-button (click)="openBrowser()" expand="block" fill="clear" shape="round">
+    browser
+  </ion-button>
 </ion-content>

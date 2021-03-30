@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { HapticsImpactStyle, Plugins } from '@capacitor/core';
 import { AlertController, ModalController } from '@ionic/angular';
 import { Tab2Page } from '../tab2/tab2.page';
 
@@ -23,6 +24,7 @@ export class Tab1Page {
           text: 'Delete',
           handler: () => {
             console.log('clicked!');
+            Plugins.Haptics.impact({ style: HapticsImpactStyle.Heavy });
           },
           role: 'destructive',
         },
@@ -60,5 +62,20 @@ export class Tab1Page {
     });
 
     await modal.present();
+  }
+
+  public async presentNativeModal(): Promise<void> {
+    const modal = await Plugins.Modals.confirm({
+      title: 'Sure?',
+      message: 'are you very sure?',
+    });
+    console.log(modal.value);
+  }
+
+  public async openBrowser(): Promise<void> {
+    await Plugins.Browser.open({
+      url: 'https://ilionx.com',
+      presentationStyle: 'popover',
+    });
   }
 }
