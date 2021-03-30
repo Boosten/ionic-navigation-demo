@@ -7,9 +7,24 @@
 <ion-content [fullscreen]="true">
   <ion-header collapse="condense">
     <ion-toolbar>
-      <ion-title size="large">Home</ion-title>
+      <ion-title size="large">Ionic Demo page</ion-title>
     </ion-toolbar>
   </ion-header>
-
-  <app-explore-container name="Home"></app-explore-container>
+  <h2>routerLink</h2>
+  <ion-button mode="ios" routerLink="/tabs/tab2"> Click me </ion-button>
+  <ion-button color="secondary" routerLink="/tabs/tab2"> Click me </ion-button>
+  <ion-button color="tertiary" routerLink="/tabs/tab2"> Click me </ion-button>
+  <ion-button color="dark" routerLink="/tabs/tab2"> Click me </ion-button>
+  <ion-button color="medium" routerLink="/tabs/tab2"> Click me </ion-button>
+  <ion-button color="light" routerLink="/tabs/tab2"> Click me </ion-button>
+  <hr />
+  <h2>alert</h2>
+  <ion-button (click)="showAlert()" mode="ios"> Click me </ion-button>
+  <ion-button (click)="showAlert()" color="secondary"> Click me </ion-button>
+  <ion-button (click)="showAlert()" color="tertiary"> Click me </ion-button>
+  <ion-button (click)="showAlert()" color="dark"> Click me </ion-button>
+  <ion-button (click)="showAlert()" color="medium"> Click me </ion-button>
+  <ion-button (click)="showAlert()" color="light"> Click me </ion-button>
+  <hr />
+  <ion-button mode="md" (click)="presentModal()"> Click me </ion-button>
 </ion-content>
